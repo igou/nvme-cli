@@ -13,6 +13,7 @@ SYNOPSIS
 			  [--data-len=<data-len> | -l <data-len>]
 			  [--sel=<select> | -s <select>]
 			  [--raw-binary | -b]
+			  [--human-readable | -H]
 
 DESCRIPTION
 -----------
@@ -63,13 +64,17 @@ OPTIONS
 	Range Type
 
 --cdw11=<cdw11>::
-	The value for command dword 11, if applicable. Only known feature
-	using this is the interrupt vector configuration feature.
+	The value for command dword 11, if applicable.
 
 -b::
 --raw-binary::
 	Print the raw feature buffer to stdout if the feature returns
 	a structure.
+
+-H::
+--human-readable::
+	This option will parse and format many of the bit fields
+	into human-readable formats.
 
 EXAMPLES
 --------

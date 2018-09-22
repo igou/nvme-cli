@@ -16,8 +16,10 @@ SYNOPSIS
 		[--host-traddr=<traddr>   | -w <traddr>]
 		[--hostnqn=<hostnqn>      | -q <hostnqn>]
 		[--nr-io-queues=<#>       | -i <#>]
+		[--queue-size=<#>         | -Q <#>]
 		[--keep-alive-tmo=<#>     | -k <#>]
 		[--reconnect-delay=<#>    | -c <#>]
+		[--ctrl-loss-tmo=<#>      | -l <#>]
 
 DESCRIPTION
 -----------
@@ -73,6 +75,11 @@ OPTIONS
 --nr-io-queues=<#>::
 	Overrides the default number of I/O queues create by the driver.
 
+-Q <#>::
+--queue-size=<#>::
+	Overrides the default number of elements in the I/O queues created
+	by the driver.
+
 -k <#>::
 --keep-alive-tmo=<#>::
 	Overrides the default keep alive timeout (in seconds).
@@ -81,6 +88,10 @@ OPTIONS
 --reconnect-delay=<#>::
 	Overrides the default delay (in seconds) before reconnect is attempted
 	after a connect loss.
+
+-l <#>::
+--ctrl-loss-tmo=<#>::
+	Overrides the default controller loss timeout period (in seconds).
 
 EXAMPLES
 --------

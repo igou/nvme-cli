@@ -751,11 +751,13 @@ nvme-connect(1) Manual Page
                 [--nqn=&lt;subnqn&gt;           | -n &lt;subnqn&gt;]
                 [--traddr=&lt;traddr&gt;        | -a &lt;traddr&gt;]
                 [--trsvcid=&lt;trsvcid&gt;      | -s &lt;trsvcid&gt;]
-                [--host_traddr=&lt;traddr&gt;   | -w &lt;traddr&gt;]
+                [--host-traddr=&lt;traddr&gt;   | -w &lt;traddr&gt;]
                 [--hostnqn=&lt;hostnqn&gt;      | -q &lt;hostnqn&gt;]
                 [--nr-io-queues=&lt;#&gt;       | -i &lt;#&gt;]
+                [--queue-size=&lt;#&gt;         | -Q &lt;#&gt;]
                 [--keep-alive-tmo=&lt;#&gt;     | -k &lt;#&gt;]
-                [--reconnect-delay=&lt;#&gt;    | -c &lt;#&gt;]</pre>
+                [--reconnect-delay=&lt;#&gt;    | -c &lt;#&gt;]
+                [--ctrl-loss-tmo=&lt;#&gt;      | -l &lt;#&gt;]</pre>
 <div class="attribution">
 </div></div>
 </div>
@@ -836,17 +838,6 @@ cellspacing="0" cellpadding="4">
 </p>
 </dd>
 <dt class="hdlist1">
--w &lt;traddr&gt;
-</dt>
-<dt class="hdlist1">
---host-traddr=&lt;traddr&gt;
-</dt>
-<dd>
-<p>
-        TBD
-</p>
-</dd>
-<dt class="hdlist1">
 -s &lt;trsvcid&gt;
 </dt>
 <dt class="hdlist1">
@@ -860,10 +851,10 @@ cellspacing="0" cellpadding="4">
 </p>
 </dd>
 <dt class="hdlist1">
--s &lt;traddr&gt;
+-w &lt;traddr&gt;
 </dt>
 <dt class="hdlist1">
---host_traddr=&lt;traddr&gt;
+--host-traddr=&lt;traddr&gt;
 </dt>
 <dd>
 <p>
@@ -898,6 +889,18 @@ cellspacing="0" cellpadding="4">
 </p>
 </dd>
 <dt class="hdlist1">
+-Q &lt;#&gt;
+</dt>
+<dt class="hdlist1">
+--queue-size=&lt;#&gt;
+</dt>
+<dd>
+<p>
+        Overrides the default number of elements in the I/O queues created
+        by the driver.
+</p>
+</dd>
+<dt class="hdlist1">
 -k &lt;#&gt;
 </dt>
 <dt class="hdlist1">
@@ -918,6 +921,17 @@ cellspacing="0" cellpadding="4">
 <p>
         Overrides the default delay (in seconds) before reconnect is attempted
         after a connect loss.
+</p>
+</dd>
+<dt class="hdlist1">
+-l &lt;#&gt;
+</dt>
+<dt class="hdlist1">
+--ctrl-loss-tmo=&lt;#&gt;
+</dt>
+<dd>
+<p>
+        Overrides the default controller loss timeout period (in seconds).
 </p>
 </dd>
 </dl></div>
@@ -965,7 +979,7 @@ for <a href="mailto:keith.busch@intel.com">Keith Busch</a>.</p></div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-17 11:43:33 EST
+Last updated 2018-04-10 11:22:55 MDT
 </div>
 </div>
 </body>
